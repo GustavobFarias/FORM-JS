@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM JS</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https: //fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário JavaScript</h1>
+        <form id="form-enviar">
+            <input type="text" id="usuario" required placeholder="Digite seu nome completo:" >
+            <p class="error-nome">Seu nome não está completo...</p>
+            <input type="number" id="idade-usuario" required placeholder="Sua idade:">
+            <input type="number" id="numero-favorito" required placeholder="Digite seu número favorito:">
+            <textarea id="deixa-menssagem" placeholder="Deixe sua menssagem (opcional)"></textarea>
+            <button id="btn-enviar" type="submit">Enviar</button>
+        </form>
+        <p class="menssagem-usuario"></p>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>

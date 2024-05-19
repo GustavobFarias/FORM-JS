@@ -1,0 +1,58 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poetsen One", sans-serif;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+.container h1 {  
+    color: rgba(34, 34, 241, 0.726);
+    text-align: center;
+    margin-bottom: 15px;
+}
+.container input, textarea, button {
+    display: block; 
+    padding: 12px;
+    width: 500px;
+    margin-bottom: 8px;
+    resize: none;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.457);
+}
+.container button  {
+    background-color: rgba(34, 34, 241, 0.726);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+}
+.container button:hover {
+    background-color: rgba(34, 34, 241, 0.87);
+    cursor: pointer;
+}
+.error-nome {
+    font-size: 12px;
+    padding: 8px;
+    background-color: red;
+    margin-bottom: 8px;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+input.error {
+    color: red;
+    border-color: red;
+    outline-color: red;
+}
+
+.menssagem-usuario {
+    color: #fff;
+    background-color: rgb(128, 224, 32);
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
