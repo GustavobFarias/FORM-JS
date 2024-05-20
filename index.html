@@ -10,15 +10,20 @@
 <body>
     <div class="container">
         <h1>Formulário JavaScript</h1>
-        <form id="form-enviar">
-            <input type="text" id="usuario" required placeholder="Digite seu nome completo:" >
-            <p class="error-nome">Seu nome não está completo...</p>
-            <input type="number" id="idade-usuario" required placeholder="Sua idade:">
-            <input type="number" id="numero-favorito" required placeholder="Digite seu número favorito:">
-            <textarea id="deixa-menssagem" placeholder="Deixe sua menssagem (opcional)"></textarea>
+        <form id="formulario">
+            <input type="number" id="campoA" required placeholder="Campo A">
+
+            <p class="error-menssagem">
+                [ERROR] O número do campo <b>A</b> precisa ser maior! Tente novamente.
+            </p>
+
+            <input type="number" id="campoB" required placeholder="Campo B">
+            
             <button id="btn-enviar" type="submit">Enviar</button>
-        </form>
-        <p class="menssagem-usuario"></p>
+
+            <p class="sucesso"></p>
+
+        </form>     
     </div>
     <script src="main.js"></script>
     

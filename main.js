@@ -1,46 +1,31 @@
-const form = document.getElementById('form-enviar')
-const nomeUsuario = document.getElementById('usuario')
-let formValido = false;
+const form = document.getElementById('formulario')
+const campoA = document.getElementById('campoA')
+const campoB = document.getElementById('campoB')
 
-function validaNome(nomeCompleto) {
-    const nomeCompletoUsuario = nomeCompleto.split(' ')
-    return nomeCompletoUsuario.length >= 2;
-}
-
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function(e){
     e.preventDefault();
-
-    const idadeUsuario = document.getElementById('idade-usuario')
-    const numeroFavorito = document.getElementById('numero-favorito')
-    const deixaMessagemUsuario = document.getElementById('deixa-menssagem')
-    const menssagemSucesso = `O ${nomeUsuario.value} tem ${idadeUsuario.value} anos e o número favorito dele é ${numeroFavorito.value} !`
-     
-    formValido = validaNome(nomeUsuario.value);
-    if (formValido) {
-        const menssagemUsuarioSucesso = document.querySelector('.menssagem-usuario');
-        menssagemUsuarioSucesso.innerHTML = menssagemSucesso;
-        menssagemUsuarioSucesso.style.display = 'block'
-
-        nomeUsuario.value = '';
-        idadeUsuario.value = '';
-        numeroFavorito.value = '';
-        deixaMessagemUsuario.value = '';
-    } else {
-        nomeUsuario.style.border = '1px solid red'
-        document.querySelector('.menssagem-usuario').style.display = 'block'
-    }
-})
-
-nomeUsuario.addEventListener('keyup', function(e){
-    console.log(e.target.value);
-    formValido = validaNome(e.target.value);
-
-    if (!formValido) {
-        nomeUsuario.classList.add('error')
-        document.querySelector('.error-nome').style.display = 'block'
-    } else {
-        nomeUsuario.classList.remove('error')
-        document.querySelector('.error-nome').style.display = 'none'
-    }
     
+    const campoValorA = Number(campoA.value)
+    const campoValorB = Number(campoB.value)
+
+    const menssagemError = `[ERROR] O número do campo <b>A</b> precisa ser maior! Tente novamente.`
+    const menssagemSucesso = `Parabéns o campo <b>A</b> ${campoValorA} está maior que o campo <b>B</b> ${campoValorB}!`
+
+    if (campoValorA <= campoValorB) {
+        const campoFalse = document.querySelector('.error-menssagem')
+        campoA.classList.add('error')
+        campoFalse.innerHTML = menssagemError;
+        campoFalse.style.display = 'block'
+        document.querySelector('.sucesso').style.display = 'none';
+    } else {
+        campoA.classList.remove('error')
+        const campoVerdadeiro = document.querySelector('.sucesso');      
+        campoVerdadeiro.innerHTML = menssagemSucesso;
+        campoVerdadeiro.style.display = 'block';
+        document.querySelector('.error-menssagem').style.display = 'none'
+
+        campoA.value = '';
+        campoB.value = '';
+    }
 })
+    

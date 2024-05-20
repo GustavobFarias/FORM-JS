@@ -14,10 +14,10 @@
     text-align: center;
     margin-bottom: 15px;
 }
-.container input, textarea, button {
+.container input, button {
     display: block; 
     padding: 12px;
-    width: 500px;
+    width: 600px;
     margin-bottom: 8px;
     resize: none;
     border-radius: 5px;
@@ -34,8 +34,8 @@
     background-color: rgba(34, 34, 241, 0.87);
     cursor: pointer;
 }
-.error-nome {
-    font-size: 12px;
+.error-menssagem {
+    font-size: 16px;
     padding: 8px;
     background-color: red;
     margin-bottom: 8px;
@@ -49,9 +49,10 @@ input.error {
     outline-color: red;
 }
 
-.menssagem-usuario {
+.sucesso {
+    font-size: 16px;
     color: #fff;
-    background-color: rgb(128, 224, 32);
+    background-color: rgb(87, 167, 7);
     padding: 20px;
     border-radius: 5px;
     display: none;
